@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom'
 import './postcard.scss'
 
 interface PersonPost {
@@ -8,7 +7,7 @@ interface PersonPost {
     body:string;
 }
 
-const PostCard = ({ id, title, body, userId } : PersonPost)=> {
+const PostCard = ({ title, body } : PersonPost)=> {
 
     return (
         <div className="posts container">

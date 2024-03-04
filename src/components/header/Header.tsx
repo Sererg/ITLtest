@@ -1,6 +1,6 @@
 
 import { NavLink } from 'react-router-dom';
-import vector from '../../assets/vector.svg'
+import vector from "../../assets/vector.svg"
 import './header.scss'
 
 const Header = () => {

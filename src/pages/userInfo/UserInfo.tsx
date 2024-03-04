@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import Pagination from "../../components/pagination/Pagination"
 import { useAppDispatch, useAppSelector } from "../../services/storeHook/hook"
 import { addFavorites } from "../../services/favorites/favoriteSlice"
 import vector from "../../assets/vector.svg"
@@ -50,8 +49,6 @@ const UserInfo = () => {
         const data = await result.json()
         setUser(data)
       }
-      console.log(user, "post");
-      console.log(userInfo, '123');
     
       useEffect(() => {
         getPlaceHolderAPI()
@@ -84,7 +81,6 @@ const UserInfo = () => {
                 </div>
             
                 {user?.map((elem: PersonPost) => {
-                    console.log(elem, '112');
                     return (
                     <div>
                         <PostCard 
@@ -97,16 +93,6 @@ const UserInfo = () => {
                     )
                 })}
             </div>
-            {/* 
-            <div className="pagination">
-                <Pagination
-                    onPageChange={onPageChange}
-                    page={page}
-                    offset={offset}
-                    limit={limit}
-                    total={total}
-                />
-            </div> */}
         </div>
     )
 }

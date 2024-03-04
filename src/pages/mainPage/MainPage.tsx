@@ -24,19 +24,6 @@ const MainPage = () => {
       getPlaceHolderAPI()
     }, [])
 
-    // const [page, setPage] = useState(1);
-    // const [offset, setOffset] = useState(1);
-    // const [limit] = useState(10);
-
-    // const onPageChange = (newPage) => {
-    //     const newOffset = newPage * limit - (limit - 1);
-    //     setOffset(newOffset);
-    //     setPage(newPage);
-    // };
-  
-    console.log(allUsers);
- 
-
     return (
             <div className= "cards__box container">
                 {allUsers?.map(( personItem : PersonItem )=> {

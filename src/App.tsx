@@ -1,4 +1,3 @@
-
 import './App.scss'
 import '../src/style/styles.scss'
 import Header from './components/header/Header'
@@ -21,6 +20,7 @@ function App() {
                 <Route path="/" element={<MainPage/>} />
                 <Route path="/users/:id" element={<UserInfo />} />
                 <Route path="/favorites" element={<FavoritesPage/>} />
+                <Route path="/favorites/users/:id" element={<UserInfo />} />
               </Routes>
             </main>
           </div>

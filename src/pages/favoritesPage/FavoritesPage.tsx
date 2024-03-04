@@ -12,12 +12,10 @@ const FavoritesPage = () => {
         website:string 
     }
 
-
     const favoritesUsers = useAppSelector((state) => state.allFavorites )
-    console.log(favoritesUsers);
     return (
     <>  
-      <div className= "cards__box container">
+      <div className={favoritesUsers.length < 1 ? "container" : "cards__box container"}>
         {favoritesUsers.length 
     ? (favoritesUsers?.map(( personItem : PersonItem ) => (
                         <div className= "cards__wrapper">
